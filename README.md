@@ -11,6 +11,7 @@ Clone this directory from the commandline to your local machine
 Setup and initiate a virtual environment
 
 `vitrualenv -p python3 venv`
+
 `source venv/bin/activate`
 
 Install requirments
