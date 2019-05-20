@@ -1,6 +1,6 @@
 # Project metadata scraping
 
-Quick crawling of DSS form projects returning high level project metadata.
+Quick crawling of DSS for projects. Uses the bundle endpoint of the DSS but avoids crawling through all bundles by submitting one ES query per dataset. Returns high level project metadata.
 
 ## To run
 
