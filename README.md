@@ -1,6 +1,8 @@
 # Project metadata scraping
 
 Quick crawling of DSS form projects returning high level project metadata.
+Lookup latest attributes
+See attribute usage.
 
 ## To run
 
@@ -15,10 +17,11 @@ Setup and initiate a virtual environment
 
 Install requirments
 
-`pip install -r requirements.txt`
+`pip install hca-ingest`
+`pip install pandas`
 
 Run example script wth no params
 
 `python example.py`
 
-This script shows you how the main function can be used. Metadata on either 'all' or 'unique by project name' are returned as dataframes.
+This script shows you how the main function can be used.
