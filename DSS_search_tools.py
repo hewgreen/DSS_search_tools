@@ -138,6 +138,7 @@ class projectInspector:
 
         self.attributes_per_project = {}
         for project_uuid in project_uuids:
+            print('Working on: {}'.format(project_uuid))
             query = append_project_list_to_query(INITIAL_Q, [project_uuid])
             get_generator = get_dss_generator(query)
             found_attributes = self.metadata_attribute_search(get_generator, limit_run)
