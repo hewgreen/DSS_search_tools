@@ -12,19 +12,12 @@ from collections import defaultdict
 INITIAL_Q = {
     "query": {
         "bool": {
-            "must_not": [
+            "must": [
                 {
                     "terms": {
                         "files.project_json.provenance.document_id": []
                     }
 
-                }
-            ],
-            "must": [
-                {
-                    "exists": {
-                        "field": "files.project_json.provenance.document_id"
-                    }
                 }
             ]
         }
@@ -38,7 +31,7 @@ def get_dss_generator(query):
     return (bundle_generator, total_hits)
 
 def append_project_list_to_query(query, unique_projects):
-    query.get("query").get("bool").get("must_not")[0].get("terms")[
+    query.get("query").get("bool").get("must")[0].get("terms")[
         "files.project_json.provenance.document_id"] = unique_projects
     return query
 
